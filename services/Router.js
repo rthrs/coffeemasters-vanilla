@@ -37,13 +37,16 @@ const Router = {
                 }
         }
 
-        if (pageElement) {
-            const cache = document.querySelector('main');
+        const cache = document.querySelector('main');
+        
+        if (pageElement) {    
             cache.innerHTML = ""; // quick and dirty way to remove elements
             // cache.children[0].remove() // or we can remove elements like that
             cache.appendChild(pageElement);
             window.scrollX = 0;
             window.scrollY = 0;
+        } else {
+            cache.innerHTML = "404"
         }
         
     }
