@@ -16,8 +16,6 @@ const Router = {
         Router.go(location.pathname)
     },
     go: (route, addToHistory = true) => {
-        console.log('got to', route)
-
         if (addToHistory) {
             history.pushState({ route }, '', route);
         }
@@ -38,7 +36,7 @@ const Router = {
                     pageElement.dataset.productId = paramId;
                 }
         }
-        console.log({pageElement})
+
         if (pageElement) {
             const cache = document.querySelector('main');
             cache.innerHTML = ""; // quick and dirty way to remove elements
