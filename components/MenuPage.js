@@ -25,7 +25,11 @@ export class MenuPage extends HTMLElement {
 
         window.addEventListener('app-menu-change', () => {
             this.render();
-        })
+        });
+
+        // Don't forget about the initial render, otherwise, the page will not render on
+        // navigation back, since event listener will not trigger again...
+        this.render();
     }
 
     render() {

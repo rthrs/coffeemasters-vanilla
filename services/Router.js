@@ -35,13 +35,13 @@ const Router = {
                 if (route.startsWith('/product-')) {
                     pageElement = document.createElement('details-page')
                     const paramId = route.substring(route.lastIndexOf('-') + 1);
-                    pageElement.dataset.id = paramId;
+                    pageElement.dataset.productId = paramId;
                 }
         }
-
+        console.log({pageElement})
         if (pageElement) {
             const cache = document.querySelector('main');
-            cache.innerHTML = "" // quick and dirty way to remove elements
+            cache.innerHTML = ""; // quick and dirty way to remove elements
             // cache.children[0].remove() // or we can remove elements like that
             cache.appendChild(pageElement);
             window.scrollX = 0;
