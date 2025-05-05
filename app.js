@@ -1,7 +1,11 @@
-import API from "./services/API.js";
 import { loadData } from "./services/Menu.js";
 import Store from "./services/Store.js";
 import Router from "./services/Router.js";
+
+import "./components/MenuPage.js";
+import "./components/ProductItem.js";
+import "./components/DetailsPage.js";
+import "./components/OrderPage.js";
 
 window.app = {}
 app.store = Store;
